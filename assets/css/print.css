@@ -1,0 +1,39 @@
+/* Print Stylesheet for Receipt & Report */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #receiptModal .modal-body,
+    #receiptModal .receipt-paper,
+    #receiptModal .receipt-paper * {
+        visibility: visible;
+    }
+
+    #receiptModal .modal-body {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .modal-backdrop, .modal-box {
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        transform: none !important;
+        max-width: 100% !important;
+    }
+
+    .modal-header, .modal-footer, .app-sidebar, .app-header {
+        display: none !important;
+    }
+
+    .receipt-paper {
+        border: 1px solid #000 !important;
+        padding: 20px !important;
+        color: #000 !important;
+    }
+}
